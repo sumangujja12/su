@@ -1,0 +1,22 @@
+{
+    "timestamp": 1612941162000,
+    "user": {
+        "userId": "12346",
+        "name": "sake"
+    },
+    "type": "trend",
+    "vessels": [
+        {
+            "imo": 8999748,
+            "enginenumber": "99935",
+            "signals": [
+                {
+                    "signalName": "LAT",
+                    "source": "signals"
+                }
+            ]
+        }
+    ],
+    "notes": "my first notes",
+    "reference_id": null
+}
