@@ -1,0 +1,23 @@
+
+   
+{
+    "timestamp":1518797118000,
+    "type": "angle",
+    "favorite_name":"Fav_B2",
+    "user_id":"12345",
+    "vessels": [
+      {
+      "imo": 9999914,
+      "enginenumber": 58795,
+      "signals": [
+        {
+          "signalName": "CylinderPressure4",
+          "source": "fastdata1",
+          "color":"#5505d3",
+          "display_rangemax":1,
+          "display_rangemin":-1
+        } 
+      ]
+    }
+    ]
+  }

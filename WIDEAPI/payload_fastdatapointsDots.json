@@ -1,0 +1,16 @@
+{
+    "starttime": 1635201900000,
+    "endtime": 1635374700000,
+    "vessels": [
+        {
+            "imo": 8999748,
+            "signals": [
+                {
+                    "signalName": "CylinderPressure1",
+                    "source": "fastdata1",
+                    "shortName": "Pressure"
+                }
+            ]
+        }
+    ]
+}

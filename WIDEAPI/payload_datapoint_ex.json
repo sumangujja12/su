@@ -1,0 +1,20 @@
+    {
+    "starttime": 1627166735000,
+    "endtime": 1627166875000,
+    "resolution": "raw",
+    "vessels": [
+        {
+            "imo": 8269773,
+            "signals": [
+                {
+                    "colName": "LAT",
+                    "source": "signals"
+                },
+                {
+                    "colName": "LON",
+                    "source": "signals"
+                }
+            ]
+        }
+    ]
+}

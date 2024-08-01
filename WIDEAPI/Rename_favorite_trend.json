@@ -1,0 +1,23 @@
+{
+  "starttime": 1518796837000,
+  "endtime": 1518797118000,
+  "type": "trend",
+  "favorite_name":"Fav_D",
+  "old_favorite_name":"Fav_B2",
+  "user_id":"12345",
+  "vessels": [
+      {
+      "imo": 8999748,
+      "signals": [
+        {
+          "colName": "LAT",
+          "signalName": "LAT",
+          "source": "signals",
+          "color":"#5505d3",
+          "display_rangemax":1,
+          "display_rangemin":-1
+        } 
+      ]
+    }
+    ]
+}

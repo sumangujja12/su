@@ -1,0 +1,19 @@
+{
+  "starttime": 1518796837000,
+  "endtime": 1518797118000,
+  "type": "trend",
+  "vessels": [
+    {
+      "imo": 8999748,
+      "signals": [
+        {
+          "signalName": "LAT",
+          "source": "signals"
+        },{
+            "signalName": "LON",
+          "source": "signals"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+    "timestamp": 1518796837000,
+    "user": {
+        "userId": 123456,
+        "name": "abc"
+    },
+    "type": "angle",
+    "signals": [
+        {
+            "signalName": "P1",
+            "source": "ems_1_signals"
+        },
+        {
+            "signalName": "P6",
+            "source": "ems_1_failures"
+        }
+    ],
+    "notes": "My first note",
+    "reference_id": null
+}

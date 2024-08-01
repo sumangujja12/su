@@ -1,0 +1,900 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Serenity BDD Automation Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Serenity BDD Automation Test Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jan 17, 2024 07:24:29 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jan 17, 2024 07:24:29 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jan 17, 2024 07:39:55 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>9</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>2</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='81%'>
+<b>9</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='18%'><b>2</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='81%'><b>9</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='18%'><b>2</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='84%'><b>11</b> steps passed</small></div>
+<div>
+<small data-tooltip='15%'><b>2</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"About Screen":85.344,"Alarm List":81.813,"Login to WinGD Application":76.536,"Data Reporting":80.578,"Data Downloader screen":80.998,"Engine Overview":80.335,"Fast Data Chart":80.726,"Fast Data Binfile Uploader":80.586,"Logout":80.148,"Settings":75.18,"Trendchart":122.419
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>ProjectName</td>
+<td>Serenity BDD Test</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>firefox</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 9,
+failParent: 2,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 9,
+failChild: 2,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 11,
+failGrandChild: 2,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">About Screen</p>
+            <p class="text-sm">
+              <span>7:24:30 pm</span> / <span>00:01:25:344</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">About Screen</h5>
+<span class='badge badge-success'>01.17.2024 7:24:30 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:25:56 pm</span>
+<span class='badge badge-default'>00:01:25:344</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>To test the About screen  launching in the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.Abouttest.Engineovw()">
+                <span>Given Select About icon form Left side menu</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="26"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Alarm List</p>
+            <p class="text-sm">
+              <span>7:25:56 pm</span> / <span>00:01:21:813</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Alarm List</h5>
+<span class='badge badge-success'>01.17.2024 7:25:56 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:27:17 pm</span>
+<span class='badge badge-default'>00:01:21:813</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="27"><span class="badge log pass-bg mr-2">Pass</span>To test the Alarm screen in the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw()">
+                <span>Given Select Alarmlist icon form Left side menu</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="51"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Login to WinGD Application</p>
+            <p class="text-sm">
+              <span>7:27:17 pm</span> / <span>00:01:16:536</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Login to WinGD Application</h5>
+<span class='badge badge-success'>01.17.2024 7:27:17 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:28:34 pm</span>
+<span class='badge badge-default'>00:01:16:536</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=51</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="52"><span class="badge log pass-bg mr-2">Pass</span>To test the Login scenario to the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.WinGDLoginTest.wingdloginflow()">
+                <span>Given Login to the WinGD Application</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="76"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Data Reporting</p>
+            <p class="text-sm">
+              <span>7:28:34 pm</span> / <span>00:01:20:578</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Data Reporting</h5>
+<span class='badge badge-success'>01.17.2024 7:28:34 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:29:55 pm</span>
+<span class='badge badge-default'>00:01:20:578</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=76</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="77"><span class="badge log pass-bg mr-2">Pass</span>To test the Data Reporting screen launching in the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.DataReportingtest.Engineovw()">
+                <span>Given Select Data Reporting icon form Left side menu</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="101"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Data Downloader screen</p>
+            <p class="text-sm">
+              <span>7:29:55 pm</span> / <span>00:01:20:998</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Data Downloader screen</h5>
+<span class='badge badge-success'>01.17.2024 7:29:55 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:31:16 pm</span>
+<span class='badge badge-default'>00:01:20:998</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=101</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="102"><span class="badge log pass-bg mr-2">Pass</span>To test the Data Downloader screen in the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.Datadownloadertest.Engineovw()">
+                <span>Given Select Data downloader icon form Left side menu</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="126"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Engine Overview</p>
+            <p class="text-sm">
+              <span>7:31:16 pm</span> / <span>00:01:20:335</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Engine Overview</h5>
+<span class='badge badge-success'>01.17.2024 7:31:16 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:32:36 pm</span>
+<span class='badge badge-default'>00:01:20:335</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=126</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="127"><span class="badge log pass-bg mr-2">Pass</span>To test the Engine Overview screen launching in the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.Engineovwtest.Engineovw()">
+                <span>Given Select Engine Overview icon form Left side menu</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="151"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Fast Data Chart</p>
+            <p class="text-sm">
+              <span>7:32:36 pm</span> / <span>00:01:20:726</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Fast Data Chart</h5>
+<span class='badge badge-success'>01.17.2024 7:32:36 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:33:57 pm</span>
+<span class='badge badge-default'>00:01:20:726</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=151</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="152"><span class="badge log fail-bg mr-2">Fail</span>To test the Fast Data Chart screen in the WinGD Application</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="starter.Cloud.Stepdefinitions.Fastdatacharttest.Engineovw()">
+                <span>Given Select Fastdatachart icon form Left side menu</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[class=' css-1jqq78o-placeholder']"}
+  (Session info: chrome-headless-shell=120.0.6099.217)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7cdc78a5829c20e10c2281b1609f1034, findElement {using=xpath, value=//div[class=' css-1jqq78o-placeholder']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 120.0.6099.217, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\40011732\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63546}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63546/devtoo..., se:cdpVersion: 120.0.6099.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7cdc78a5829c20e10c2281b1609f1034
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Fastdatachartpage.favoritedata(Fastdatachartpage.java:26)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fastdatacharttest.Engineovw(Fastdatacharttest.java:69)
+	at ✽.Select Fastdatachart icon form Left side menu(file:///D:/OneDrive%20-%20LTTS/Desktop/WIDE/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fastdata.feature:5)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>starter.Cloud.Stepdefinitions.Fastdatacharttest.beforeorafter(io.cucumber.java.Scenario)</span>
+      <div>To_test_the_Fast_Data_Chart_screen_in_the_WinGD_Application
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded1.png' src="../Screenshots/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="176"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Fast Data Binfile Uploader</p>
+            <p class="text-sm">
+              <span>7:33:57 pm</span> / <span>00:01:20:586</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Fast Data Binfile Uploader</h5>
+<span class='badge badge-success'>01.17.2024 7:33:57 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:35:17 pm</span>
+<span class='badge badge-default'>00:01:20:586</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=176</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="177"><span class="badge log pass-bg mr-2">Pass</span>To test the Fast Data bin file uploader screen in the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.Fastdatauploadertest.Engineovw()">
+                <span>Given Select Fastdata uploader icon form Left side menu</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="201"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Logout</p>
+            <p class="text-sm">
+              <span>7:35:17 pm</span> / <span>00:01:20:148</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Logout</h5>
+<span class='badge badge-success'>01.17.2024 7:35:17 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:36:38 pm</span>
+<span class='badge badge-default'>00:01:20:148</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=201</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="202"><span class="badge log pass-bg mr-2">Pass</span>To test the Logout scenario to the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.Logouttest.Engineovw()">
+                <span>Given Select Logout icon form Left side menu</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="226"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Settings</p>
+            <p class="text-sm">
+              <span>7:36:38 pm</span> / <span>00:01:15:180</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Settings</h5>
+<span class='badge badge-success'>01.17.2024 7:36:38 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:37:53 pm</span>
+<span class='badge badge-default'>00:01:15:180</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=226</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="227"><span class="badge log fail-bg mr-2">Fail</span>To test the Settings screen in the WinGD Application</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="starter.Cloud.Stepdefinitions.Settingstest.Engineovw()">
+                <span>Given Select Settings icon form Left side menu</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@aria-label='Settings']"}
+  (Session info: chrome-headless-shell=120.0.6099.217)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [47b17fda8694ac23319f9ffa08b2ed17, findElement {using=xpath, value=//div[@aria-label='Settings']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome-headless-shell, browserVersion: 120.0.6099.217, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\40011732\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63827}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63827/devtoo..., se:cdpVersion: 120.0.6099.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 47b17fda8694ac23319f9ffa08b2ed17
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Settingspage.Settingsicon(Settingspage.java:22)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Settingstest.Engineovw(Settingstest.java:67)
+	at ✽.Select Settings icon form Left side menu(file:///D:/OneDrive%20-%20LTTS/Desktop/WIDE/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Settings.feature:5)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER">
+                <span>starter.Cloud.Stepdefinitions.Settingstest.beforeorafter(io.cucumber.java.Scenario)</span>
+      <div>To_test_the_Settings_screen_in_the_WinGD_Application
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../Screenshots/embedded2.png' src="../Screenshots/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="251"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Trendchart</p>
+            <p class="text-sm">
+              <span>7:37:53 pm</span> / <span>00:02:02:419</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Trendchart</h5>
+<span class='badge badge-success'>01.17.2024 7:37:53 pm</span>
+<span class='badge badge-danger'>01.17.2024 7:39:55 pm</span>
+<span class='badge badge-default'>00:02:02:419</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=251</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="252"><span class="badge log pass-bg mr-2">Pass</span>To test the Trendchart screen in the WinGD Application</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="starter.Cloud.Stepdefinitions.Trendcharttest.Engineovw()">
+                <span>Given Select Trendchart icon form Left side menu</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:32:36 pm</td>
+<td>
+<a href="#" class="linked" test-id='151' id='153'>Given Select Fastdatachart icon form Left side menu</a>
+<div class="">
+<span class="badge badge-default">Fast Data Chart.To test the Fast Data Chart screen in the WinGD Application.Given Select Fastdatachart icon form Left side menu</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>19:36:38 pm</td>
+<td>
+<a href="#" class="linked" test-id='226' id='228'>Given Select Settings icon form Left side menu</a>
+<div class="">
+<span class="badge badge-default">Settings.To test the Settings screen in the WinGD Application.Given Select Settings icon form Left side menu</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

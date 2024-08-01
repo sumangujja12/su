@@ -1,0 +1,14 @@
+{
+  "starttime": 1581865500000,
+  "endtime": 1581951900000,
+  "signaltype":"power",
+  "vessels": [
+    {
+      "imo": 8999748,
+      "enginenumber": [
+            "99935",
+            "99936"
+        ]
+    }
+  ]
+}

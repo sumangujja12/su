@@ -1,0 +1,22 @@
+{
+    "timestamp": 1550188800000,
+    "user": {
+        "userId": "222",
+        "name": "admin"
+    },
+    "type": "angle",
+    "vessels": [
+        {
+            "imo": 8999748,
+            "enginenumber": "99935",
+            "signals": [
+                {
+                    "signalName": "CylinderPressure1",
+                    "source": "fastdata1"
+                }
+            ]
+        }
+    ],
+    "notes": "my first note",
+    "reference_id": null
+}

@@ -1,0 +1,2181 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Serenity BDD Automation Report</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Serenity BDD Automation Test Report</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Mar 1, 2024 07:22:22 am</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$64%'>
+                    <span class='strong'>9</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='35%'>
+                    5</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='69%'>
+                    <span class='strong'>30</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='30%'>
+                    13</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='76%'>
+                    <span class='strong'>42</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='23%'>
+                    13</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>About Screen</span>
+						<span class='test-time'>Mar 1, 2024 07:22:24 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 02 57.475</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the About screen  launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='3' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Abouttest.Engineovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select About icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='86'>
+					<div class='test-heading'>
+						<span class='test-name'>Alarm List</span>
+						<span class='test-time'>Mar 1, 2024 07:25:21 am</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='87' status='fail'>
+
+	<span class='duration right label'>00 04 25.115</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Alarm screen in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='88' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Select Alarmlist icon form Left side menu</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+		</li>
+		<li test-id='128' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Alarmlisttest.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Alarm_screen_in_the_WinGD_Application</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded1.png' src='../Screenshots/embedded1.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='171'>
+					<div class='test-heading'>
+						<span class='test-name'>Login to WinGD Application</span>
+						<span class='test-time'>Mar 1, 2024 07:29:47 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='172' status='pass'>
+
+	<span class='duration right label'>00 02 47.915</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Login scenario to the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='173' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.WinGDLoginTest.wingdloginflow())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Login to the WinGD Application</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='256'>
+					<div class='test-heading'>
+						<span class='test-name'>Basic Auth</span>
+						<span class='test-time'>Mar 1, 2024 07:32:35 am</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='257' status='fail'>
+
+	<span class='duration right label'>00 02 03.441</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Basic Auth API</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='258' class='node given Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given I look up for token generation1</div>
+
+
+					<div class="node-step">Step undefined</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='341'>
+					<div class='test-heading'>
+						<span class='test-name'>Data Reporting</span>
+						<span class='test-time'>Mar 1, 2024 07:34:38 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='342' status='pass'>
+
+	<span class='duration right label'>00 02 53.077</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Data Reporting screen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='343' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.DataReportingtest.Engineovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select Data Reporting icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='426'>
+					<div class='test-heading'>
+						<span class='test-name'>Data Downloader screen</span>
+						<span class='test-time'>Mar 1, 2024 07:37:31 am</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='427' status='pass'>
+
+	<span class='duration right label'>00 02 52.974</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Data Downloader screen in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='428' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Datadownloadertest.Engineovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select Data downloader icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='511' status='fail'>
+
+	<span class='duration right label'>00 02 47.660</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Data Downloader screen in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='512' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Datadownloadertest.Engineovw())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Select Data downloader icon form Left side menu</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: #Data\ downloader_6
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [f093c151-9f70-4217-bd8a-2fc8d9686ff4, findElement {using=id, value=Data downloader_6}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:20644, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23752, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:20644/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f093c151-9f70-4217-bd8a-2fc8d9686ff4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Datadownloaderpage.Datadownloadericon(Datadownloaderpage.java:22)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Datadownloadertest.Engineovw(Datadownloadertest.java:67)
+	at ?.Select Data downloader icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Datadownloaderpage.feature:5)
+</textarea>
+		</li>
+		<li test-id='550' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Datadownloadertest.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Data_Downloader_screen_in_the_WinGD_Application</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded2.png' src='../Screenshots/embedded2.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='595'>
+					<div class='test-heading'>
+						<span class='test-name'>Engine Overview</span>
+						<span class='test-time'>Mar 1, 2024 07:43:12 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='596' status='pass'>
+
+	<span class='duration right label'>00 02 53.565</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Engine Overview screen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='597' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Engineovwtest.Engineovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select Engine Overview icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='680'>
+					<div class='test-heading'>
+						<span class='test-name'>Fast Data Binfile Uploader</span>
+						<span class='test-time'>Mar 1, 2024 07:46:05 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='681' status='pass'>
+
+	<span class='duration right label'>00 02 53.651</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Fast Data bin file uploader screen in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='682' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fastdatauploadertest.Engineovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select Fastdata uploader icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='765'>
+					<div class='test-heading'>
+						<span class='test-name'>Fast Data Chart</span>
+						<span class='test-time'>Mar 1, 2024 07:48:59 am</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='766' status='fail'>
+
+	<span class='duration right label'>00 02 39.406</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Fast Data Chart screen in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='767' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fastdatacharttest.Engineovw())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Select Fastdatachart icon form Left side menu</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [face9d41-9376-44e6-95b3-4e8534ef4d62, findElement {using=id, value=email}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9730, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 5916, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9730/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: face9d41-9376-44e6-95b3-4e8534ef4d62
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.LoginPageBO.setUserName(LoginPageBO.java:23)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fastdatacharttest.Engineovw(Fastdatacharttest.java:60)
+	at ?.Select Fastdatachart icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fastdatachart.feature:5)
+</textarea>
+		</li>
+		<li test-id='802' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fastdatacharttest.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Fast_Data_Chart_screen_in_the_WinGD_Application</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded3.png' src='../Screenshots/embedded3.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='850'>
+					<div class='test-heading'>
+						<span class='test-name'>Fleet Screen</span>
+						<span class='test-time'>Mar 1, 2024 07:51:38 am</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='851' status='fail'>
+
+	<span class='duration right label'>00 02 29.395</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Active Fault column color coding in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='852' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_ActivefaltCC.dateAndTime())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Verifying the Active Fault column  color coding in Fleet Overview Screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: #email
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [71f5488e-7511-4309-ba79-ca5808a69681, findElement {using=id, value=email}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:46088, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11444, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:46088/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 71f5488e-7511-4309-ba79-ca5808a69681
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.LoginPageBO.setUserName(LoginPageBO.java:23)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_ActivefaltCC.dateAndTime(Fleet_ActivefaltCC.java:49)
+	at ?.Verifying the Active Fault column  color coding in Fleet Overview Screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_ActivefaltCC.feature:5)
+</textarea>
+		</li>
+		<li test-id='884' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fleet_ActivefaltCC.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Active_Fault_column_color_coding_in_fleetscreen</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded4.png' src='../Screenshots/embedded4.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='935' status='fail'>
+
+	<span class='duration right label'>00 02 47.629</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Breadcrumb from Fault list search in fleetAnalysis of Fleet Overview</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='936' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_Breadcrumb.faultList())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Verify the Selection of  Fleetoverview from Fault list in Fleet Analysis Screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@aria-label='Fleet overview']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [84fb5407-da16-4030-9440-053c619441b8, findElement {using=xpath, value=//div[@aria-label='Fleet overview']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:2166, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23088, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:2166/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 84fb5407-da16-4030-9440-053c619441b8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.navigateToFleet(fleetOverview.java:213)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_Breadcrumb.faultList(Fleet_Breadcrumb.java:63)
+	at ?.Verify the Selection of  Fleetoverview from Fault list in Fleet Analysis Screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_Breadcrumb.feature:4)
+</textarea>
+		</li>
+		<li test-id='967' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fleet_Breadcrumb.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Breadcrumb_from_Fault_list_search_in_fleetAnalysis_of_Fleet_Overview</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded5.png' src='../Screenshots/embedded5.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,019' status='pass'>
+
+	<span class='duration right label'>00 03 22.664</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the collapseAll selection scenario in fleetscreen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,020' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.collapseAllGrid.collapseGrid())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verifying Collapse All button functionality in Fleet Overview screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,103' status='pass'>
+
+	<span class='duration right label'>00 03 20.545</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Data KPI column color coding in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,104' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_DataKPICC.dateAndTime())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verifying the Data KPI col  color coding in Fleet Overview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,187' status='fail'>
+
+	<span class='duration right label'>00 02 47.676</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Datepicker in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,188' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_DatePicker.dateAndTime())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Selecting Date and Time Picker in Fleet Analysis Screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@aria-label='Fleet overview']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [dec770ca-c477-469d-905c-adf4ba09fa34, findElement {using=xpath, value=//div[@aria-label='Fleet overview']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:48283, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 23364, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:48283/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: dec770ca-c477-469d-905c-adf4ba09fa34
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.navigateToFleet(fleetOverview.java:213)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_DatePicker.dateAndTime(Fleet_DatePicker.java:82)
+	at ?.Selecting Date and Time Picker in Fleet Analysis Screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_Datepicker.feature:5)
+</textarea>
+		</li>
+		<li test-id='1,217' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fleet_DatePicker.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Datepicker_in_fleetscreen</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded6.png' src='../Screenshots/embedded6.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,271' status='pass'>
+
+	<span class='duration right label'>00 03 20.542</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Engine KPI column color coding in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,272' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_EngineKPICC.dateAndTime())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verifying the Engine KPI column  color coding in Fleet Overview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,355' status='pass'>
+
+	<span class='duration right label'>00 03 30.189</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Engine Number Column search bar by giving matching data in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,356' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_Enginenumsearch.enginenumsearchBarData())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify the Engine Number Column Search functionality in Fleet Overview screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,439' status='fail'>
+
+	<span class='duration right label'>00 02 48.067</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Engine KPI Column search bar by giving matching data in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,440' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_EngKPIsearch.enginenumsearchBarData())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Verify the Engine KPI Column Search functionality in Fleet Overview screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@aria-label='Fleet overview']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3773869c-6867-41ba-b046-72146b5d91a8, findElement {using=xpath, value=//div[@aria-label='Fleet overview']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:8121, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10036, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:8121/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3773869c-6867-41ba-b046-72146b5d91a8
+	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.navigateToFleet(fleetOverview.java:213)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_EngKPIsearch.enginenumsearchBarData(Fleet_EngKPIsearch.java:61)
+	at ?.Verify the Engine KPI Column Search functionality in Fleet Overview screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_Engkpiserch.feature:5)
+</textarea>
+		</li>
+		<li test-id='1,466' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fleet_EngKPIsearch.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Engine_KPI_Column_search_bar_by_giving_matching_data_in_fleetscreen</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded7.png' src='../Screenshots/embedded7.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,523' status='fail'>
+
+	<span class='duration right label'>00 02 56.445</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Engine Type Column search bar by giving matching data in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,524' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_Engtypesearch.enginenumsearchBarData())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Verify the Engine Type Column Search functionality in Fleet Overview screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: Element <span class="dx-checkbox-icon"> is not clickable at point (138,205) because another element <div class="divLoader"> obscures it
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [304e676a-2948-442e-8ff7-900ba35d00a0, clickElement {id=b2aac29f-d11f-4991-9cf4-b8a2e4eca95b}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:17378, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2976, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:17378/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (304e676a-2948-442e-8ff7-900ba35d00a0)] -> xpath: /html/body/div/section/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div[6]/div/div/div[1]/div/table/tbody/tr[2]/td[1]/div/div/span]
+Session ID: 304e676a-2948-442e-8ff7-900ba35d00a0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.navigateToFleet(fleetOverview.java:217)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_Engtypesearch.enginenumsearchBarData(Fleet_Engtypesearch.java:61)
+	at ?.Verify the Engine Type Column Search functionality in Fleet Overview screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_Engtypesearch.feature:5)
+</textarea>
+		</li>
+		<li test-id='1,549' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fleet_Engtypesearch.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Engine_Type_Column_search_bar_by_giving_matching_data_in_fleetscreen</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded8.png' src='../Screenshots/embedded8.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,607' status='pass'>
+
+	<span class='duration right label'>00 03 29.935</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the IMO Number Column search bar by giving matching data in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,608' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_imocolsearch.searchBarData())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify the IMO Number Column Search functionality in Fleet Overview screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,691' status='fail'>
+
+	<span class='duration right label'>00 02 55.005</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the Search in KPI Overview  of fleetAnalysis in the Fleet Overview</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,692' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_KPI_Search.kpiIcon())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Verify the Search functionality in KPI Overview of Fleet Analysis Screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@aria-label='Fleet overview']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [41a551da-aa3e-4f8c-bd5a-6aa63c01cfb9, findElement {using=xpath, value=//div[@aria-label='Fleet overview']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9385, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19892, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9385/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 41a551da-aa3e-4f8c-bd5a-6aa63c01cfb9
+	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.navigateToFleet(fleetOverview.java:213)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_KPI_Search.kpiIcon(Fleet_KPI_Search.java:64)
+	at ?.Verify the Search functionality in KPI Overview of Fleet Analysis Screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_KPI_Search.feature:5)
+</textarea>
+		</li>
+		<li test-id='1,714' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fleet_KPI_Search.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_Search_in_KPI_Overview__of_fleetAnalysis_in_the_Fleet_Overview</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded9.png' src='../Screenshots/embedded9.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,775' status='pass'>
+
+	<span class='duration right label'>00 03 20.378</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Lastupdate in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,776' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_Lastupdate_CC.dateAndTime())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verifying the Lastupdate color coding in Fleet Overview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,859' status='pass'>
+
+	<span class='duration right label'>00 03 20.467</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Remaining Days column color coding in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,860' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_RemainingCC.dateAndTime())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verifying the Remaining Days column  color coding in Fleet Overview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='1,943' status='fail'>
+
+	<span class='duration right label'>00 02 22.751</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To test the grid selection scenario in fleetscreen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='1,944' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.selectFoGrid.selectGrid())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Selecting a grid in FleetOverview Screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //div[@aria-label='Fleet overview']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [257a426d-48f7-4c6f-b12f-369bac2c6e46, findElement {using=xpath, value=//div[@aria-label='Fleet overview']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:12992, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11044, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12992/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 257a426d-48f7-4c6f-b12f-369bac2c6e46
+	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.clickfleetIcon(fleetOverview.java:23)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.selectFoGrid.selectGrid(selectFoGrid.java:94)
+	at ?.Selecting a grid in FleetOverview Screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_SelectGrid.feature:5)
+</textarea>
+		</li>
+		<li test-id='1,951' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.selectFoGrid.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_test_the_grid_selection_scenario_in_fleetscreen_launching_in_the_WinGD_Application</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded10.png' src='../Screenshots/embedded10.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,027' status='pass'>
+
+	<span class='duration right label'>00 03 31.121</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Ship Column search bar by giving matching data in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,028' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_Shipcolsearch.searchBarData())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify the Ship Column Search functionality in Fleet Overview screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,111' status='pass'>
+
+	<span class='duration right label'>00 04 02.785</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the selected grid shown scenario in fleetscreen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,112' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.showSelected.showSelectedGrid())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify the Show Selected items in Fleet Overview screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,195' status='pass'>
+
+	<span class='duration right label'>00 03 22.884</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the grid unselection scenario in fleetscreen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,196' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.unSelectGrid.unSelectGrid())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify unselecting a grid in fleetOverview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,279' status='pass'>
+
+	<span class='duration right label'>00 03 12.342</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To select the Vessel Profile scenario in fleetAnalysis launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,280' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_selectVesselProfile.vesselIcon())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Selecting Vessel Profile Icon in Fleet Analysis Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,363' status='pass'>
+
+	<span class='duration right label'>00 03 06.410</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Vessel Icon in Fleet Overview screen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,364' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_selectVesselIcon.selectVessel())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Selecting Vessel Icon in Fleet Overview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,447' status='pass'>
+
+	<span class='duration right label'>00 03 18.426</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the zoomInzoomOut scenario in fleetscreen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,448' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.zoomInzoomOutTC14.zoomInzoomOut())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify zoomin and zoomout the map in fleetOverview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,531' status='pass'>
+
+	<span class='duration right label'>00 03 51.735</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the navigation of Fault list in fleetAnalysis of Fleet Overview</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,532' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_faultlistnavigation.faultList())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify the Navigation from  Fault list to other screens in Fleet Analysis Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,615' status='pass'>
+
+	<span class='duration right label'>00 03 07.178</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the search bar by giving matching data in fleetscreen</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,616' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_searchBarAction.searchBarData())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify the Search functionality in Fleet Overview screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,699' status='pass'>
+
+	<span class='duration right label'>00 03 00.937</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the search bar by giving  unmatching data in fleetscreen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,700' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_Search_Nodata.searchBarNoData())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify the Search functionality without matching data in Fleet Overview screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,783' status='pass'>
+
+	<span class='duration right label'>00 03 34.668</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Fault list search in fleetAnalysis of Fleet Overview</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,784' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_selectFaultList.faultList())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Verify the Selection of  Fault list Icon in Fleet Analysis Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,867' status='pass'>
+
+	<span class='duration right label'>00 03 06.763</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the fleet Analysis scenario in fleetscreen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,868' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_selectFleetAnalysis.fleetAnalysis())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Selecting fleet analysis in fleetOverview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='2,951' status='pass'>
+
+	<span class='duration right label'>00 03 28.528</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the  KPI Overview  of fleetAnalysis in the Fleet Overview</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='2,952' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_selectKPI.kpiIcon())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Selecting KPI Overview in Fleet Analysis Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='3,035' status='fail'>
+
+	<span class='duration right label'>00 03 44.002</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To select the Power scenario in fleetAnalysis launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='3,036' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_selectPower.PowerIcon())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Selecting Power option in Fleet Analysis Screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='February 28, 2020']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [e97d85f3-91d2-44a7-85d5-63f1c1fb8f77, findElement {using=xpath, value=//abbr[@aria-label='February 28, 2020']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:12464, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 10844, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:12464/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e97d85f3-91d2-44a7-85d5-63f1c1fb8f77
+	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.selectMonth(fleetOverview.java:575)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_selectPower.PowerIcon(Fleet_selectPower.java:103)
+	at ?.Selecting Power option in Fleet Analysis Screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_selectPower.feature:5)
+</textarea>
+		</li>
+		<li test-id='3,050' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fleet_selectPower.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_select_the_Power_scenario_in_fleetAnalysis_launching_in_the_WinGD_Application</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded11.png' src='../Screenshots/embedded11.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='3,119' status='fail'>
+
+	<span class='duration right label'>00 03 44.073</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: To select the Speed scenario in fleetAnalysis  in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='3,120' class='node given Fail' status='Fail'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_selectSpeed.speeedIcon())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Given Selecting Speed Option in Fleet Analysis Screen</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='February 28, 2020']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1ce49fee-3b26-49d5-ab89-95750cf9f89e, findElement {using=xpath, value=//abbr[@aria-label='February 28, 2020']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:44994, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 5236, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:44994/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1ce49fee-3b26-49d5-ab89-95750cf9f89e
+	at jdk.internal.reflect.GeneratedConstructorAccessor20.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.selectMonth(fleetOverview.java:575)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_selectSpeed.speeedIcon(Fleet_selectSpeed.java:103)
+	at ?.Selecting Speed Option in Fleet Analysis Screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_selectSpeed.feature:5)
+</textarea>
+		</li>
+		<li test-id='3,133' class='node * Pass' status='Pass'>
+			<div class="step-name" title="(AFTER)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>starter.Cloud.Stepdefinitions.Fleet_selectSpeed.beforeorafter(io.cucumber.java.Scenario)</div>
+
+
+					<div class="node-step">To_select_the_Speed_scenario_in_fleetAnalysis__in_the_WinGD_Application</div>
+					<div class='screenshots'>
+						<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded12.png' src='../Screenshots/embedded12.png'>
+					</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='3,203' status='pass'>
+
+	<span class='duration right label'>00 03 13.445</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Show All selection scenario in fleetscreen launching in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='3,204' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Fleet_ShowAll.showAll())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Selecting Show All option in fleetOverview Screen</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='3,287'>
+					<div class='test-heading'>
+						<span class='test-name'>Fleet Overview</span>
+						<span class='test-time'>Mar 1, 2024 09:25:56 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='3,288' status='pass'>
+
+	<span class='duration right label'>00 03 17.322</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Fleet Overview screen in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='3,289' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.FleetTest.Fleetovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select Fleet overview icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='3,372'>
+					<div class='test-heading'>
+						<span class='test-name'>Logout</span>
+						<span class='test-time'>Mar 1, 2024 09:29:13 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='3,373' status='pass'>
+
+	<span class='duration right label'>00 02 52.989</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Logout scenario to the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='3,374' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Logouttest.Engineovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select Logout icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='3,457'>
+					<div class='test-heading'>
+						<span class='test-name'>Settings</span>
+						<span class='test-time'>Mar 1, 2024 09:32:06 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='3,458' status='pass'>
+
+	<span class='duration right label'>00 02 53.487</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Settings screen in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='3,459' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Settingstest.Engineovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select Settings icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='3,542'>
+					<div class='test-heading'>
+						<span class='test-name'>Trendchart</span>
+						<span class='test-time'>Mar 1, 2024 09:35:00 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='3,543' status='pass'>
+
+	<span class='duration right label'>00 03 33.637</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: To test the Trendchart screen in the WinGD Application</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='3,544' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(starter.Cloud.Stepdefinitions.Trendcharttest.Engineovw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Select Trendchart icon form Left side menu</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>11</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 1, 2024 07:25:21 am</td>
+										<td class='linked' test-id='88'>Given Select Alarmlist icon form Left side menu</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 07:40:24 am</td>
+										<td class='linked' test-id='512'>Given Select Data downloader icon form Left side menu</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 07:48:59 am</td>
+										<td class='linked' test-id='767'>Given Select Fastdatachart icon form Left side menu</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 07:51:38 am</td>
+										<td class='linked' test-id='852'>Given Verifying the Active Fault column  color coding in Fleet Overview Screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 07:54:08 am</td>
+										<td class='linked' test-id='936'>Given Verify the Selection of  Fleetoverview from Fault list in Fleet Analysis Screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 08:03:39 am</td>
+										<td class='linked' test-id='1,188'>Given Selecting Date and Time Picker in Fleet Analysis Screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 08:13:17 am</td>
+										<td class='linked' test-id='1,440'>Given Verify the Engine KPI Column Search functionality in Fleet Overview screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 08:22:32 am</td>
+										<td class='linked' test-id='1,692'>Given Verify the Search functionality in KPI Overview of Fleet Analysis Screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 08:32:08 am</td>
+										<td class='linked' test-id='1,944'>Given Selecting a grid in FleetOverview Screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 09:15:14 am</td>
+										<td class='linked' test-id='3,036'>Given Selecting Power option in Fleet Analysis Screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mar 1, 2024 09:18:58 am</td>
+										<td class='linked' test-id='3,120'>Given Selecting Speed Option in Fleet Analysis Screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to locate element: //abbr[@aria-label='January 3, 2022']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [1e2d6c4d-08d7-4eca-bbf2-8826b13258e3, findElement {using=xpath, value=//abbr[@aria-label='January 3, 2022']}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:9707, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 15012, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:9707/devtool..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 1e2d6c4d-08d7-4eca-bbf2-8826b13258e3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.Alarmlistpage.dateselection(Alarmlistpage.java:61)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Alarmlisttest.Engineovw(Alarmlisttest.java:73)
+	at ?.Select Alarmlist icon form Left side menu(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Alarmlistpage.feature:5)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.ElementClickInterceptedException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 1, 2024 08:16:05 am</td>
+										<td class='linked' test-id='1,524'>Given Verify the Engine Type Column Search functionality in Fleet Overview screen</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: Element <span class="dx-checkbox-icon"> is not clickable at point (138,205) because another element <div class="divLoader"> obscures it
+Build info: version: '4.11.0', revision: '040bc5406b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [304e676a-2948-442e-8ff7-900ba35d00a0, clickElement {id=b2aac29f-d11f-4991-9cf4-b8a2e4eca95b}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 119.0.1, moz:accessibilityChecks: false, moz:buildID: 20231106151204, moz:debuggerAddress: 127.0.0.1:17378, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2976, moz:profile: C:\Users\40011732\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:17378/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (304e676a-2948-442e-8ff7-900ba35d00a0)] -> xpath: /html/body/div/section/div/div/div[2]/div/div/div[1]/div/div[2]/div/div/div[6]/div/div/div[1]/div/table/tbody/tr[2]/td[1]/div/div/span]
+Session ID: 304e676a-2948-442e-8ff7-900ba35d00a0
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at cucumber.starter@1.0.0-SNAPSHOT/pages.Cloud.fleetOverview.navigateToFleet(fleetOverview.java:217)
+	at cucumber.starter@1.0.0-SNAPSHOT/starter.Cloud.Stepdefinitions.Fleet_Engtypesearch.enginenumsearchBarData(Fleet_Engtypesearch.java:61)
+	at ?.Verify the Engine Type Column Search functionality in Fleet Overview screen(file:///D:/cucumber-starter-bdd-automation%202/cucumber-starter-bdd-automation/src/test/resources/features/Loginfeature/Fleet_Engtypesearch.feature:5)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>14</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>43</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>55</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 1, 2024 07:22:22 am</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 1, 2024 09:38:33 am</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>02 16 11.039</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>ProjectName</td>
+								<td>Serenity BDD Test</td>
+							</tr>
+							<tr>
+								<td>Browser</td>
+								<td>chrome</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>Windows </td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 14,
+				passParent: 9,
+				failParent: 5,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 43,
+				passChild: 30,
+				failChild: 13,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 55,
+				passGrandChild: 42,
+				failGrandChild: 13,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "About Screen":177.481,"Alarm List":265.115,"Login to WinGD Application":167.915,"Basic Auth":123.441,"Data Reporting":173.077,"Data Downloader screen":340.651,"Engine Overview":173.565,"Fast Data Binfile Uploader":173.651,"Fast Data Chart":159.406,"Fleet Screen":5657.397,"Fleet Overview":197.322,"Logout":172.989,"Settings":173.487,"Trendchart":213.637
+			};
+		</script>
+		
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "starttime": 1627166735000,
+  "endtime": 1627166875000,
+  "resolution": "raw",
+  "type": "trend",
+  "vessels": [
+    {
+      "imo": 8999748,
+      "signals": [
+        {
+          "colName": "P1",
+          "source": "ems_1_signals"
+        } ,{
+            "colName": "P6",
+          "source": "ems_1_failures"
+        }
+      ]
+    }
+  ]
+}

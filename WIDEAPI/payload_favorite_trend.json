@@ -1,0 +1,22 @@
+{
+    "starttime": 1518796837000,
+    "endtime": 1518797118000,
+    "type": "trend",
+    "favorite_name":"test1",
+    "user_id":"12345",
+    "vessels": [
+      {
+      "imo": 8999748,
+      "signals": [
+        {
+          "colName": "LON",
+          "signalName": "LON",
+          "source": "signals",
+          "color":"#5505d3",
+          "display_rangemax":100,
+          "display_rangemin":-100
+        } 
+      ]
+    }
+    ]
+  }

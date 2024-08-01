@@ -1,0 +1,22 @@
+{
+  "timestamp":1518797118000,
+  "type": "angle",
+  "favorite_name":"Fav_D113",
+  "old_favorite_name":"Fav_C2",
+  "user_id":"12345",
+  "vessels": [
+    {
+      "imo": 8999748,
+      "enginenumber": 99935,
+      "signals": [
+        {
+          "signalName": "GAV1Position6",
+          "color":"#5505d3",
+          "display_rangemax":1,
+          "source": "fastdata1",
+          "display_rangemin":-1
+        } 
+      ]
+    }
+  ]
+}
